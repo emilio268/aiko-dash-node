@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const loginRoutes = require('./routes/login');
 const { redirect } = require('express/lib/response');
 
+
 const app = express();
 app.set('port', 5000);
 
@@ -15,6 +16,10 @@ app.engine('.hbs', engine({
 	extname: '.hbs',
 }));
 app.set('view engine', 'hbs');
+
+app.get('/login/index', (req, res) => {
+	res.render('login/index'); 
+  });
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -34,6 +39,8 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true
 }));
+
+app.use(express.static('public'));
 
 app.listen(app.get('port'), () => {
  console.log('listening on port ', app.get('port'));

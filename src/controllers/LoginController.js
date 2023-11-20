@@ -4,7 +4,7 @@ function index(req, res) {
     res.redirect('/');
 	
   } else {
-    res.render('login/index');
+    res.render('home');
   }
 }
 
@@ -20,8 +20,10 @@ function auth(req, res) {
     conn.query('SELECT * FROM users WHERE email = ?', [email], (err, rows) => {
       if(rows.length > 0) {
         console.log(rows);
+        res.render('dashboard/dashboard')
       } else {
         console.log('not');
+        res.render('login/index')
       }
       /*
       req.session.loggedin = true;

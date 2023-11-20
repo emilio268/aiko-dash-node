@@ -1,15 +1,59 @@
-<div>
-  <h1>Login</h1>
-	<form action="/auth" method="post">
-		<label for="email">
-			<!-- font awesome icon -->
-			<i class="fas fa-user"></i>
-		</label>
-		<input type="email" name="email" placeholder="email" id="email" required>
-		<label for="password">
-			<i class="fas fa-lock"></i>
-		</label>
-		<input type="password" name="password" placeholder="Password" id="password" required>
-		<input type="submit" value="Login">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>OmegaPetShop</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h1>Omega
+			PetShop</h1>
+		<p>Bienvenido a la veterinaria OmegaPetShop!!!</p>
+		<span>
+			<p>Ingresa Con tus Redes Sociales</p>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+			
+		</span>
+		</div>
+	</div>
+	<form method="post" action="/auth">
+	
+		<div class="right">
+		<h5>Ingresa</h5>
+		<p>¿No tines una cuenta? <a href="#">Crea tu cuenta ahora mismo</a> Es muy sencillo</p>
+		<div class="inputs">
+			<input type="text" placeholder="Usuario o Email " name="email" id="email" requred >
+			<br>
+			<input type="password" placeholder="Contraseña" name="password" id="password" required>
+		</div>
+			
+			<br><br>
+			
+		<div class="remember-me--forget-password">
+				<!-- Angular -->
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Recordame</span>
+	</label>
+			
+		</div>
+		<p>¿Olvidaste la Contraseña?</p>
+			<br>
+			<button type="submit" value="Login">Ingresar</button>
+	</div>
 	</form>
+	
 </div>
+<!-- partial -->
+  
+</body>
+</html>
